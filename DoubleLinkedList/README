@@ -1,0 +1,147 @@
+****************
+* Project 2 - DoubleLinkedList
+* CS 221
+* 12/2/2021
+* Gavin Wale
+****************
+
+OVERVIEW:
+
+ The DoubleLinkedList utilizes a node system to organize and store data.
+ The nodes are able to communicate with the nodes before and after the 
+ current node.
+
+
+INCLUDED FILES:
+
+ * DLLNode.java - the node file
+ * IndexedUnsortedList - implemented by IUDoubleLinkedList
+ * IteratorTests.java - gathers the Iterator test cases
+ * ItrTest_1 through ItrTest_43.java - tests the DLL iterator
+ * ItrState.java - enumeration for states of the iterator
+ * IUDoubleLinkedList.java - main file of the DLL data structure
+ * ListIteratorTests.java - gathers the ListIterator test cases
+ * ListItrTest_1 through ListItrTest_43.java - tests the DLL list iterator
+ * ListItrState.java - enumeration for states of the list iterator
+ * ListType.java - enumeration for the different types of lists
+ * Results.java - possible results expected in tests
+ * RunIndexedUnsortedTests.java - runs IndexedUnsortedTests
+ * RunIteratorTests.java - runs the iterator tests
+ * RunListIteratorTests.java - runs the list iterator tests
+ * Test_1 through Test_39.java - tests the DLL itself
+ * README - this file
+
+
+COMPILING AND RUNNING:
+
+ Give the command for compiling the program, the command
+ for running the program, and any usage instructions the
+ user needs.
+ 
+ These are command-line instructions for a system like onyx.
+ They have nothing to do with Eclipse or any other IDE. They
+ must be specific - assume the user has Java installed, but
+ has no idea how to compile or run a Java program from the
+ command-line.
+ 
+ To perform each of the tests on the file, follow the following
+ instructions:
+
+ RunIndexedUnsortedTests -
+	From the directory with all source files, compile the class
+	with the following command:
+		$ javac RunIndexedUnsortedTests.java
+
+	Run the compiled class file with the command:
+		$ java RunIndexedUnsortedTests.java
+
+RunIteratorTests -
+	From the directory with all source files, compile the class
+	with the following command:
+		$ javac RunIteratorTests.java
+
+	Run the compiled class file with the command:
+		$ java RunIteratorTests.java
+
+RunListIteratorTests.java-
+	From the directory with all source files, compile the class
+	with the following command:
+		$ javac RunListIteratorTests.java
+
+	Run the compiled class file with the command:
+		$ java RunListIteratorTests.java
+	
+
+	The RunListIteratorTests program will prompt you in the command window to
+	enter a test for (1-10) then through (11-20) and so on through 43. Any
+	number or character entered will yield the same results, so do not worry about
+	the input.
+
+
+PROGRAM DESIGN AND IMPORTANT CONCEPTS:
+
+ The DoubleLinkedList is the logical backend to a complex double linked node system.
+ As nodes are added to a list, they are connected to one another going forwards and backwards.
+
+ This complex system of nodes was created using node objects, that each have the ability to store
+ addresses to a different node "previous" and "next." The node that would call previous or next,
+ generally, is known as current. This "current" node allows for a simple user experience where a
+ user could do almost anything with a node in the sequence.
+
+ Most methods were optimized to avoid repeating code and limit runtime execution. The idea was to
+ create the most effective double linked node system possible.
+
+ The IndexedUnsortedList interface has plenty of methods that provided the outline to the node system.
+ These methods were filled out to maintain the linkage of the nodes throughout movement in the
+ IUDoubleLinkedList class or the iterator class. This system is a great representation of the power 
+ and use case of objects in the Java programming language. The ability to create such a data structure is incredible.
+
+ Additionally, there is plenty of room for growth from the point the DLL is at. The list contains generic types,
+ meaning the list/its nodes can hypothetically store any object someone can imagine and create in java. 
+
+ The test classes proved very helpful in the debugging and creation of this project. Without a quality test
+ class (or 120 of them), it is very difficult to write a great program. The one thing in the main
+ IUDoubleLinkedList.java class that could be improved is the remove(index) method. This method proved to be
+ quite the challenge, and I think if it could be solved the DLL would work even smoother!
+
+ Lastly, I think, with real world application, a system like this could be useful in plenty of situations from
+ secure military communication to making a multiplayer videogame. The possibilities are endless as long as
+ you can tell the computer what you want!
+
+
+TESTING:
+
+ This program was tested with the over 100 test files both created and provided. Each file tests certain cases with
+ every method and every possible next step. Writing the test classes was a long, rigorous activity; however, their
+ use was amazing while developing this data structure. The testing strategy was that every time changes were
+ made, I would run the testing class, and it would tell me specifically what methods I was failing for what case.
+
+ There is one issue that remains with the remove(index) method. Most tests pass, but for certain situations,
+ it doesn't work and it throws off a few different methods in cases where that method was used.
+
+
+DISCUSSION:
+ 
+ In the development of this program, I first came across an issue with a few of my more complicated add/remove methods.
+ However, once I got the hang of one of them, the rest came quite easily as they all required the same steps/logic
+ in a certain order to remove or add something and check to see where in the list the element would be.
+
+ After finishing all my methods, there was only remove(index) left that I couldn't seem to figure out. I moved onto
+ the iterators, which, to my surprise, were a breeze. I passed most of my iterator tests on the first try. The only
+ issue just seemed to be stemming from the original issue - remove(index). I went in for some help, but I wasn't really
+ making any progress with it.
+
+ I then moved onto my ListIterator methods which I found extremely challenging at the start... until I realized I could
+ implement my fully functional methods from my main IUDoubleLinkedList class! Once I figured that out, those were mostly
+ a breeze. One thing I learned in this project is how to quickly and efficiently identify null-pointer exceptions. In the
+ past for me those have always been super difficult to find. This project everything kind of quicked and debugging those
+ issues was always almost instant when I would realize my mistake. It felt good to see this progress in myself, and I can't
+ wait to keep moving forward.
+
+ 
+EXTRA CREDIT:
+
+ N/A
+
+
+----------------------------------------------------------------------------
