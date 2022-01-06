@@ -1,0 +1,79 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2580
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fmodern\fcharset0 Courier;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;}
+\margl1440\margr1440\vieww14300\viewh15360\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs24 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 ****************\
+* Project 1: Grid Monitor\
+* CS 221\
+* 9/17/21\
+* Gavin Wale\
+**************** \
+\
+OVERVIEW:\
+\
+This program reads in text files and sorts the data into a 2D array. It analyzes if the value of an individual element falls between the range of its delta and delta + average of adjacent elements.\
+\
+INCLUDED FILES:\
+\
+* GridMonitor.java - main class of program\
+* Test_sampleDoubles.java - tests a doubles array\
+* Test_sample4x5.java - tests a 4x5 array\
+* Test_sample.java - tests a basic array\
+* Test_oneByOne.java - tests a 1x1 array\
+* Test_negatives.java - tests negative values\
+* Test_basics.java - base test for GridMonitor\
+* RunGridMonitorTests.java - runs the tests\
+* GridMonitorTests.java - compilation of all tests\
+* GridMonitorInterface.java - interface of methods for GridMonitor\
+* Test_wideRange.java - tests wide range values\
+* sampleDoubles.txt - doubles\
+* sample4x5.txt - 4x5\
+* sample.txt - base\
+* oneByOne.txt - 1x1\
+* negatives.txt - negatives\
+* wideRange.txt - wide range\
+\
+COMPILING AND RUNNING:\
+\
+First, make sure all included files are in the working directory.\
+\
+Execute the following command to compile the class: \
+\
+$ javac GridMonitor.java\
+\
+Run the compiled class with the following command:\
+\
+$ java GridMonitor\
+\
+Console will output the number of tests passed: (33/33)\
+\
+PROGRAM DESIGN AND IMPORTANT CONCEPTS:\
+\
+Most of the methods in the program simply return a double[][] that was created and filled via the GridMonitor method. The GridMonitor method has the following logical applications:\
+\
+-for loops to iterate through a 2D array\
+-if/else statements to decide whether the adjacent index was in bounds\
+-use of class variables with encapsulation\
+-instantiation of multiple different arrays (declared at top of class)\
+\
+Aside from the GridMonitor method, the readFile method scanned a file and wrote the data into a 2D array. It used 3 different scanners, but optimally it could have used 2. 3 were used for readability and to keep things looking clean and organized.\
+\
+TESTING: \
+\
+I tested my program by creating my own personal testing file. Each time I saw something wrong in the grader, I would simulate the part where an error occurred. This allowed my debugger to be much cleaner, and so I was able to sift through any issues much more efficiently. There are no bugs remaining in my program, thanks to this (according to the test classes). Some weird numbers could cause my program to break, hypothetically, and some other situations could cause an unexpected exception to be thrown.\
+\
+DISCUSSION: \
+\
+I started this program by mapping each method needed on a white board. I then wrote out all the math that needed to be done, and solved for the equations that would need to be used in each method. After that, I wrote the logic corresponding to those methods, and I double checked myself using an array that I drew on a piece of paper. The biggest error that I came across in the development of this project was throwing a NullPointerException.\
+\
+I realized that when I was instantiating new arrays, they were being left empty because I wasn\'92t doing it quite right. Fixing my copy method and implementing it more efficiently to the GridMonitor method allowed for things to flow quite smoothly from baseGrid down to dangerGrid.\
+\
+During this project, something that clicked for me was that logic/algorithms all boil down to their simplest parts: true/false. As I wrote everything out, my knowledge of Java syntax allowed my thoughts/ideas to flow onto Eclipse quickly and efficiently. Secondly, I learned how to Debug even better and how to write my own class to find the issues in my program.\
+\
+EXTRA CREDIT:\
+None.}
